@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yelp</title>
+</head>
+<body>
+    <div id='title'>Hello</div>
+
+
+    <script>
+        //fetch('https://api.yelp.com/v3/businesses/search/location=irvine')
+        fetch('https://api.yelp.com/v3/businesses/north-india-restaurant-san-francisco&apikey=Kujah-_-eEJt_dbNnyxalaQG2sAmTwX332SaTuJLG063oRh1YZV29eZ7IPU6Tn0SlHvDAC56U_3TOoCXQNq154XAo_ntnQyrzlu1VYAtx7FE9tBvfD4n-nuob404XnYx')
+            .then(r => r.json())
+            .then(response => {
+                document.getElementById('title').textContent = `There are people right now`
+                console.log(response)
+                return 'True'
+                // people.forEach(({ name, craft }) => {
+                //     let personElem = document.createElement('li')
+                //     personElem.textContent = `${name} aboard the ${craft}`
+                //     document.getElementById('people').append(personElem)
+                // })
+            })
+            .catch(e => console.error(e))
+    
+    
+    </script>
+</body>
+</html>
